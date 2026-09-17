@@ -22,6 +22,12 @@ def ver_metas():
         estado = "Cumplida" if meta["cumplida"] else "Pendiente"
         print(f"{i}. {meta['descripcion']} - {estado}")
 
+def eliminar_meta(indice):
+    if 0 <= indice < len(metas):
+        eliminada = metas.pop(indice)
+        print(f"Meta eliminada: {eliminada['descripcion']}")
+    else:
+        print("Índice no válido")
 
 def contar_cumplidas():
     total = sum(1 for m in metas if m["cumplida"])
