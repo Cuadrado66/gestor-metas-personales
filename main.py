@@ -1,4 +1,3 @@
-@"
 metas = []
 
 def agregar_meta(descripcion):
@@ -75,4 +74,3 @@ while continuar:
         continuar = False
     else:
         print("Opcion no valida, intenta de nuevo.")
-"@ | Set-Content -Path main.py -Encoding utf8
