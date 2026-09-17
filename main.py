@@ -1,8 +1,4 @@
-"""
-Gestor de Metas Personales
-Aplicacion de consola para registrar y hacer seguimiento a tus metas.
-"""
-
+@"
 metas = []
 
 def agregar_meta(descripcion):
@@ -29,14 +25,14 @@ def eliminar_meta(indice):
         eliminada = metas.pop(indice)
         print(f"Meta eliminada: {eliminada['descripcion']}")
     else:
-        print("Índice no válido")
+        print("Indice no valido")
 
 def marcar_como_cumplida(indice):
     if 0 <= indice < len(metas):
         metas[indice]["cumplida"] = True
-        print(f"¡Bien! Meta cumplida: {metas[indice]['descripcion']}")
+        print(f"Bien! Meta cumplida: {metas[indice]['descripcion']}")
     else:
-        print("Índice no válido")
+        print("Indice no valido")
 
 def mostrar_menu():
     print("\n=== Gestor de Metas Personales ===")
@@ -53,7 +49,6 @@ continuar = True
 while continuar:
     mostrar_menu()
     opcion = input("Elige una opcion: ")
-
     if opcion == "1":
         descripcion = input("Describe tu meta: ")
         agregar_meta(descripcion)
@@ -65,14 +60,14 @@ while continuar:
             indice = int(input("Indice a eliminar: "))
             eliminar_meta(indice)
         except ValueError:
-            print("Debes poner un número")
+            print("Debes poner un numero")
     elif opcion == "4":
         ver_metas()
         try:
             indice = int(input("Indice a marcar como cumplida: "))
             marcar_como_cumplida(indice)
         except ValueError:
-            print("Debes poner un número")
+            print("Debes poner un numero")
     elif opcion == "5":
         contar_cumplidas()
     elif opcion == "6":
@@ -80,3 +75,4 @@ while continuar:
         continuar = False
     else:
         print("Opcion no valida, intenta de nuevo.")
+"@ | Set-Content -Path main.py -Encoding utf8
